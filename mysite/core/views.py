@@ -23,13 +23,14 @@ def home(request):
     category = request.GET.get('category')
     language = request.GET.get('language')
 
+
     if country:
         url = f'https://newsapi.org/v2/top-headlines?country={country}&apiKey={API_KEY}'
         response = requests.get(url)
         data = response.json()
         articles = data['articles']
 
-    elif category:
+    elif category :
         url = f'https://newsapi.org/v2/top-headlines?category={category}&apiKey={API_KEY}'
         response = requests.get(url)
         data = response.json()
@@ -41,10 +42,8 @@ def home(request):
         data = response.json()
         articles = data['articles']
 
-
-
     count = User.objects.count()
-    return render(request,'core/home.html',{'count':count,'articles':articles})
+    return render(request,'home.html',{'count':count,'articles':articles})
 
 def signup(request): 
     if request.method == 'POST':

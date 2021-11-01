@@ -26,7 +26,8 @@ SECRET_KEY = 'hib@yu=c9jly3@^(tp!oc=(0_6*ids+%1in2kj8zvr*$0i^7tb'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-     'newsblogswebsite.herokuapp.com'
+     'newsblogswebsite.herokuapp.com',
+     '127.0.0.1' ,
 ]
 
 

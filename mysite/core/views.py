@@ -44,7 +44,7 @@ def home(request):
 
 
     count = User.objects.count()
-    return render(request,'home.html',{'count':count,'articles':articles})
+    return render(request,'core/home.html',{'count':count,'articles':articles})
 
 def signup(request): 
     if request.method == 'POST':

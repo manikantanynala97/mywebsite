@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+     <ul>
+          <div class="container">
+            <div class = "row">
+                 <div class="col-md-6" align="center">
+                    {% for blogs in blog %}
+                  <div class="card rounded shadow-lg m-2" style="width: 25rem;">
+                      <div class="card-body"> 
+                      <h5 class="card-title">{{blogs.title}}</h5> 
+                      <p class="card-text">{{blogs.description}}</p>
+                      <a href="{% url 'update_blog' blogs.id %}"class="btn btn-primary m-1">WATCH BLOG</a>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                    </div>
+                  </div>    
+                  {% endfor %}           
+                 </div>   
+     </ul>
+     <a href="{% url 'create_blog' %}" class="btn btn-success btn-lg">CREATE NEW BLOG</a>
+    
+</body>
+</html>
+
+{% endblock %}

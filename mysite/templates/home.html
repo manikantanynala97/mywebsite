@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+ <div align="center" class="container"> 
+ <h1>WELCOME TO OUR HOME PAGE </h1>
+  <p>
+     <strong>NO OF USERS REGISTERED  TO OUR WEBSITE:</strong>{{count}}
+  </p>
+ </div> 
+ <br>
+ <br>
+ 
+ {% if user.is_authenticated %}
+
+ {% else %} 
+
+ <h2>About Us</h2>
+ <br>
+ <br>
+ <p>
+  In this Website you can read all the live news articles of any category like Sports,Languages,Health and many more .
+ </p>
+
+ <br>
+
+ <p>
+  The speciality of this website is you can read articles related to any country and you have a freedom to choose any category.
+ </p>
+
+ <br>
+
+ <p>
+   This website also has a feature where u can add your own blogs , read your blogs , update your blogs when required and also delete your blogs if you feel it is not useful.
+ </p>
+
+
+
+
+
+
+ {% endif %}
+
+
+
+
+
+
+
+ {% if user.is_authenticated %}
+ <h2>Search Country</h2>
+
+ <form action="" method="get">
+     <input type="text" name="country">
+     <button type="submit" value="Search">Search</button>
+ </form>
+ <br>
+ <br>
+
+ <h2>Search Category</h2>
+
+ <form action="" method="get">
+     <input type="text" name="category">
+     <button type="submit" value="Search">Search</button>
+ </form>
+{% else %} 
+{% endif %}
+
+
+</div>
+
+    {% if user.is_authenticated %}
+    <div class="container">
+            <div class = "row">
+                 <div class="col-md-6" align="center">
+                  {% for i in articles %}
+                  <div class="card rounded shadow-lg m-2" style="width: 25rem;">
+                      <img class="card-img-top" src="{{i.urlToImage}}" alt="...">
+                      <div class="card-body">
+                      <p class="card-text">{{i.author}}</p> 
+                      <h5 class="card-title">{{i.title}}</h5>
+                      <p class="card-text">{{i.source.name}}</p> 
+
+                      <p class="card-text">{{i.description}}</p>
+                      <small>{{i.publishedAt}}</small>
+                      <a href="{{i.url}}" target ="_blank"class="btn btn-success m-1">See News</a>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                    </div>
+                  </div>    
+                  {% endfor %}           
+                 </div>
+
+                 <div class="col-md-4">
+                  <h3><b>Category and Country </b></h3>
+                  <hr>
+                  <br>
+                  <ul class="list-group">
+                      <li class="list-group-item"><a class="btn btn-secondary" href="{% url 'home' %}?category=technology">Technology</a></li>
+                      <li class="list-group-item"><a class="btn btn-success" href="{% url 'home' %}?category=health">Health</a></li>
+                      <li class="list-group-item"><a class="btn btn-danger" href="{% url 'home' %}?category=Entertainment">Entertainment</a></li>
+                      <li class="list-group-item"><a class="btn btn-secondary" href="{% url 'home' %}?category=Sports">Sports</a></li>
+                      <li class="list-group-item"><a class="btn btn-primary" href="{% url 'home' %}?category=Science">Science</a></li>
+                      <li class="list-group-item"><a class="btn btn-info" href="{% url 'home' %}?category=Business">Business</a></li>
+                      <li class="list-group-item"><a class="btn btn-secondary" href="{% url 'home' %}?country=in">India</a></li>
+                      <li class="list-group-item"><a class="btn btn-success" href="{% url 'home' %}?country=us">USA</a></li>
+                      <li class="list-group-item"><a class="btn btn-danger" href="{% url 'home' %}?country=ae">UAE</a></li>
+                      <li class="list-group-item"><a class="btn btn-secondary" href="{% url 'home' %}?country=ua">Ukraine</a></li>
+                      <li class="list-group-item"><a class="btn btn-primary" href="{% url 'home' %}?country=ma">Morroco</a></li>
+                      <li class="list-group-item"><a class="btn btn-info" href="{% url 'home' %}?country=jp">Japan</a></li>
+                    </ul>
+                  </ul>
+              </div>
+
+            </div>    
+    </div>
+    {% else %} 
+    {% endif %}
+   
+{% endblock %}
+

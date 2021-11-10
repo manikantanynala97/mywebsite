@@ -53,7 +53,7 @@ def signup(request):
             return redirect('home')
     else:
         form=UserCreationForm()
-        return HttpResponse(form)  
+        return render(request,'registration/signup.html',{'form':form})  
 
 
 

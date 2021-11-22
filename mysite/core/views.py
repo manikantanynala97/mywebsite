@@ -43,8 +43,7 @@ def home(request):
         data = response.json()
         articles = data['articles']
 
-    count = User.objects.count()
-    return render(request,'home.html',{'count':count,'articles':articles})
+    return render(request,'home.html',{'articles':articles})
 
 def signup(request): 
     if request.method == 'POST':

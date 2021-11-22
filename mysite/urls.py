@@ -5,6 +5,7 @@ from django.urls import path,include
 from django.conf.urls import url
 from mysite.core import views
 
+
 urlpatterns = [
     path('',views.home,name='home'),
     path('json/',views.json,name='json'),

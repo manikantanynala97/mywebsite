@@ -1,3 +1,4 @@
+
 (function($) {
     'use strict';
     var init = function($element, options) {

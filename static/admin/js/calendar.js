@@ -4,6 +4,7 @@ calendar.js - Calendar functions by Adrian Holovaty
 depends on core.js for utility functions like removeChildren or quickElement
 */
 
+
 (function() {
     'use strict';
     // CalendarNamespace -- Provides a collection of HTML calendar-related helper functions

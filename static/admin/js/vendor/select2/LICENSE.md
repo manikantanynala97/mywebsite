@@ -1,5 +1,6 @@
 The MIT License (MIT)
 
+
 Copyright (c) 2012-2017 Kevin Brown, Igor Vaynberg, and Select2 contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

@@ -11,6 +11,7 @@
 }
 
 .selector-available, .selector-chosen {
+    
     float: left;
     width: 380px;
     text-align: center;

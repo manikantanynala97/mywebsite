@@ -12,6 +12,7 @@ deactivate () {
         PYTHONHOME="${_OLD_VIRTUAL_PYTHONHOME:-}"
         export PYTHONHOME
         unset _OLD_VIRTUAL_PYTHONHOME
+        
     fi
 
     # This should detect bash and zsh, which have a hash command that must

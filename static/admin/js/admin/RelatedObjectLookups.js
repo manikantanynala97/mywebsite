@@ -3,6 +3,7 @@
 // and Add Another links.
 
 (function($) {
+    
     'use strict';
 
     // IE doesn't accept periods or dashes in the window name, but the element IDs

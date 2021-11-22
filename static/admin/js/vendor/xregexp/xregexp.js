@@ -14,7 +14,7 @@
  * worrying about pesky cross-browser inconsistencies and the dubious `lastIndex` property. See
  * XRegExp's documentation (http://xregexp.com/) for more details.
  * @module xregexp
- * @requires N/A
+ * @requires N/A 
  */
 var XRegExp;
 

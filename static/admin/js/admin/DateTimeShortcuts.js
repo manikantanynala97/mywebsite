@@ -5,6 +5,7 @@
 (function() {
     'use strict';
     var DateTimeShortcuts = {
+        
         calendars: [],
         calendarInputs: [],
         clockInputs: [],

@@ -1,4 +1,5 @@
 /*global gettext*/
+
 (function() {
     'use strict';
     var closestElem = function(elem, tagName) {

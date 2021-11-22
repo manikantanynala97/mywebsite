@@ -15,6 +15,7 @@ from .forms import GeeksForm
 import requests
 from .models import GeeksModel
 
+
 API_KEY='87628851ebb44aec81cdd3c898b6db63'
 # Create your views here.
 

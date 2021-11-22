@@ -1,4 +1,5 @@
 /*global URLify*/
+
 (function($) {
     'use strict';
     $.fn.prepopulate = function(dependencies, maxLength, allowUnicode) {

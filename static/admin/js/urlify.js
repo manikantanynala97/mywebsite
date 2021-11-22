@@ -1,4 +1,5 @@
 /*global XRegExp*/
+
 (function() {
     'use strict';
 
